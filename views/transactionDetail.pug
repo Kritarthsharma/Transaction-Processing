@@ -24,6 +24,7 @@ html(lang='en')
         .column
           span.tag.is-danger.is-large Expenses
           each exp in user.expenses
+            - const time = new Date(exp.time).toLocaleString('en-GB', {timeZone: 'UTC'})
             article.message.is-danger
               .message-body
                 ul
@@ -32,10 +33,11 @@ html(lang='en')
                   li=`Target Account:- ${exp.targetAccount}`
                   li=`Amount:- ${exp.amount}`
                   li=`Category:- ${exp.category}`
-                  li=`Time:- ${exp.time}`
+                  li=`Time:- ${time}`
         .column
           span.tag.is-success.is-large Incomes
           each inc in user.incomes
+            - const time = new Date(inc.time).toLocaleString('en-GB', {timeZone: 'UTC'})
             article.message.is-success
               .message-body
                 ul
@@ -44,4 +46,4 @@ html(lang='en')
                   li=`Target Account:- ${inc.targetAccount}`
                   li=`Amount:- ${inc.amount}`
                   li=`Category:- ${inc.category}`
-                  li=`Time:- ${inc.time}`
+                  li=`Time:- ${time}`
