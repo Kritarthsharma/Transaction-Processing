@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Transaction Processing
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    section.hero.is-link
+      .hero-body
+        p.title.has-text-centered
+          | Transaction Processor &nbsp;
+          i.fas.fa-receipt
+        p.subtitle.has-text-centered
+          | Transactions
+    .container
+      section.hero.is-small.is-primary
+        .hero-body
+          p.title.has-text-centered=`Transactions Of ${user.name}` 
+      .columns
+        .column
+          span.tag.is-danger.is-large Expenses
+          each exp in user.expenses
+            article.message.is-danger
+              .message-body
+                ul
+                  li=`Transaction id:- ${exp.id}`
+                  li=`Source Account:- ${exp.sourceAccount}`
+                  li=`Target Account:- ${exp.targetAccount}`
+                  li=`Amount:- ${exp.amount}`
+                  li=`Category:- ${exp.category}`
+                  li=`Time:- ${exp.time}`
+        .column
+          span.tag.is-success.is-large Incomes
+          each inc in user.incomes
+            article.message.is-success
+              .message-body
+                ul
+                  li=`Transaction id:- ${inc.id}`
+                  li=`Source Account:- ${inc.sourceAccount}`
+                  li=`Target Account:- ${inc.targetAccount}`
+                  li=`Amount:- ${inc.amount}`
+                  li=`Category:- ${inc.category}`
+                  li=`Time:- ${inc.time}`

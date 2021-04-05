@@ -1,0 +1,35 @@
+/* Elements */
+
+h3 {
+	text-align: center;
+}
+
+a {
+	color: #fff;
+	display: block;
+}
+
+span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Element selectors */
+
+.is-small {
+	margin: 2rem 0 !important;
+	border-radius: 10px;
+}
+
+.tutorial {
+	width: 600px;
+	text-align: center;
+	margin: auto;
+}
+
+.button {
+	width: 600px;
+	text-align: center;
+	margin: 20px auto;
+	display: block;
+}

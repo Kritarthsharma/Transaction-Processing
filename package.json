@@ -1,0 +1,21 @@
+{
+	"name": "transaction-assignment",
+	"version": "1.0.0",
+	"description": "transaction processing app",
+	"main": "app.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "nodemon server.js"
+	},
+	"keywords": [],
+	"author": "Kritarth Sharma",
+	"license": "ISC",
+	"dependencies": {
+		"compression": "^1.7.4",
+		"express": "^4.17.1",
+		"pug": "^3.0.2"
+	},
+	"engines": {
+		"node": "^14"
+	}
+}
