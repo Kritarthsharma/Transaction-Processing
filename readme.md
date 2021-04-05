@@ -11,3 +11,5 @@
   * After installing the modules run the app by typing this command:- **npm start** 
   * Or you can also run the app by typing **npm run dev** if you are making some changes to automatically restart the node application when file changes in the directory are detected.
   * After running the app on terminal test the app at this local server:- **http://127.0.0.1:3000/**
+  
+* Use this link to access and test the app :- **https://transactionprocessing.herokuapp.com/**
