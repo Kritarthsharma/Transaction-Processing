@@ -24,7 +24,7 @@ html(lang='en')
         .column
           span.tag.is-danger.is-large Expenses
           each exp in user.expenses
-            - const time = new Date(exp.time).toLocaleString('en-GB', {timeZone: 'UTC'})
+            - const time = new Date(exp.time).toLocaleTimeString('en-GB', {timeZone: 'UTC'})
             article.message.is-danger
               .message-body
                 ul
@@ -37,7 +37,7 @@ html(lang='en')
         .column
           span.tag.is-success.is-large Incomes
           each inc in user.incomes
-            - const time = new Date(inc.time).toLocaleString('en-GB', {timeZone: 'UTC'})
+            - const time = new Date(inc.time).toLocaleTimeString('en-GB', {timeZone: 'UTC'})
             article.message.is-success
               .message-body
                 ul
