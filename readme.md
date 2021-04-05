@@ -1,7 +1,5 @@
 # Transaction Processing App
 
-# Transaction Processing App
-
 * Prerequisites
   * Make sure you have latest version of node and npm installed on your pc
 

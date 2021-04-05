@@ -2,7 +2,10 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const dotenv = require('dotenv');
 const compression = require('compression');
+
+dotenv.config({ path: './config.env' });
 
 // Middleware
 //Start express app
@@ -40,7 +43,7 @@ app.get('/:id', (req, res) => {
 });
 
 // Start the server
-const port = 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
 	console.log(`App running on port ${port}...`);
 });
